@@ -1,0 +1,149 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+	width: 100%;
+	height: 100vh;
+	font-family: "Exo", sans-serif;
+	color: #fff;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab );
+	background-size: 400% 400%;
+	-webkit-animation: gradientBG 10s ease infinite;
+	        animation: gradientBG 10s ease infinite;
+  color: #fff;
+  font-family: "Exo", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.user-form {
+  width: 100%;
+  max-width: 700px;
+}
+
+.user-form input {
+  width: 100%;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-family: inherit;
+  font-size: 1rem;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.user-form input::placeholder {
+  color: white;
+}
+
+.user-form input:focus {
+  outline: none;
+}
+
+.card {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);  
+  max-width: 800px;
+  /*background-color: #4c2885;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);*/
+  display: flex;
+  padding: 3rem;
+  margin: 0 1.5rem;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 10px solid rgba(255, 255, 255, 0.3);
+  height: 150px;
+  width: 150px;
+}
+
+.user-info {
+  color: #eee;
+  margin-left: 2rem;
+}
+
+.user-info h2 {
+  margin-top: 0;
+}
+
+.user-info ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  max-width: 400px;
+}
+
+.user-info ul li {
+  display: flex;
+  align-items: center;
+}
+
+.user-info ul li strong {
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+.repo {
+  text-decoration: none;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 0.9rem;
+  padding: 0.5rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+@-webkit-keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media (max-width: 500px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-form {
+    max-width: 400px;
+  }
+}
